@@ -1,0 +1,14 @@
+Cat_Tom: &T
+  name: Tom
+  age: 2
+  color: black
+  hair: 短毛
+  gender: female
+Dog_Jerry: &J
+  name: Jerry
+  age: 3
+  color: yellow
+  hair: 长毛
+  gender: male
+default:
+  <<: *T
