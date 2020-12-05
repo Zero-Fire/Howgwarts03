@@ -10,5 +10,6 @@ class Calculator:
         else:
             return a/b
 
+
 # a=Calculator()
 # print(a.div(0,1))
