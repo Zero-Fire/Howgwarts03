@@ -11,7 +11,7 @@ def setup_module():
 def teardown_module():
     print("计算结束")
 
-with open('./datas/calc.yaml',encoding='utf-8') as f:
+with open('datas/calc.yaml', encoding='utf-8') as f:
     datas= yaml.safe_load(f)['add']
     div_data=datas['div']
     div_datas=div_data['datas_1']
