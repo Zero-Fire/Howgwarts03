@@ -14,6 +14,7 @@ class Calculator:
     def mul(self,a,b):
         if (type(a) !=int and type(a) !=float) or (type(b)!=int and type(b) !=float):
             return "请输入数字"
+        return a*b
 
     def div(self,a,b):
         if (type(a) !=int and type(a) !=float) or (type(b)!=int and type(b) !=float):
@@ -23,7 +24,7 @@ class Calculator:
         else:
             return a/b
 
-
-a=Calculator()
-print(a.div(1,1))
+#
+# a=Calculator()
+# print(a.div(1,1))
 # print(a.div(0,1))
