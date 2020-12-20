@@ -8,4 +8,5 @@ class TestLogin:
     def teardown(self):
         pass
     def test_login(self):
-        self.main.goto_contact_page().click_add_member().add_member()
+        namelist=self.main.goto_contact_page().click_add_member().add_member().get_member()
+        assert "张三" in namelist
