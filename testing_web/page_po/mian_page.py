@@ -14,6 +14,7 @@ class MainPage(BasePage):
         return ContactPage(self.driver)
     def goto_add_member(self):
         from testing_web.page_po.add_member_page import AddMemberPage
+        self.find(By.ID,"menu_index").click()
         while True:
             self.find(By.CSS_SELECTOR,"#_hmt_click > div.index_colLeft > div.index_service > div.index_service_cnt."
                                       "js_service_list > a:nth-child(1) > div > span.ww_indexImg.ww_indexImg_AddMember").click()

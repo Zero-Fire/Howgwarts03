@@ -4,7 +4,6 @@ from selenium.webdriver.android.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-
 class BasePage:
     def __init__(self,_base_url:WebDriver = None):
         if _base_url is None:
