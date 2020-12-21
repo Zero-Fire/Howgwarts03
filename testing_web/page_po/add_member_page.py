@@ -17,9 +17,4 @@ class AddMemberPage(BasePage):
        self.find(By.CSS_SELECTOR,'.js_btn_save').click()
        #返回到通讯录页面
        return ContactPage(self.driver)
-    # def add_member_1(self,name,id,email):
-    #     self.find(By.ID,'username').send_keys(name)
-    #     self.find(By.ID,'memberAdd_acctid').send_keys(id)
-    #     self.find(By.ID,"memberAdd_mail").send_keys(email)
-    #     self.find(By.CSS_SELECTOR,".js_btn_save").click()
-    #     return  ContactPage(self.driver)
+
