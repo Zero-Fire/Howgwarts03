@@ -1,12 +1,6 @@
 # -*- coding: utf-8 -*-
 from appium import webdriver
 from appium.webdriver.common.mobileby import MobileBy
-
-
-def setup():
-    pass
-def teardown():
-    pass
 def test_demo():
     caps = {}
     caps["platformName"] = "Android"
