@@ -10,3 +10,4 @@ class TestCode():
         self.driver.quit()
     def test_case(self):
         self.main.goto_address_list().click_member().click_add_member().edit_member().estimate()
+
