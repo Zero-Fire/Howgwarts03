@@ -12,17 +12,17 @@ import allure
 # def teardown_module():
 #     print("计算结束")
 
-# with open('datas/calc.yaml', encoding='utf-8') as f:
-#     datas= yaml.safe_load(f)['add']
-#     div_data=datas['div']
-#     div_datas=div_data['datas_1']
-#     div_key=div_data['key_1']
-#     add_data=datas['datas']
-#     add_key=datas['key']
-#     mul_data=datas['mul_data']
-#     mul_key=datas['mul_key']
-#     sub_data=datas['sub_data']
-#     sub_key=datas['sub_key']
+with open('datas/calc.yaml', encoding='utf-8') as f:
+    datas= yaml.safe_load(f)['add']
+    div_data=datas['div']
+    div_datas=div_data['datas_1']
+    div_key=div_data['key_1']
+    add_data=datas['datas']
+    add_key=datas['key']
+    mul_data=datas['mul_data']
+    mul_key=datas['mul_key']
+    sub_data=datas['sub_data']
+    sub_key=datas['sub_key']
 
 
 @allure.feature("测试计算器")

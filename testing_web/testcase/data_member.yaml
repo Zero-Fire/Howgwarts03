@@ -1,3 +1,10 @@
 member:
-  - ['张三',zhangsan,zhangsan@qq.com]
+  - ["张三",zhangsan,zhangsan@qq.com]
   - ['李四',lisi,lisi@qq.com]
+  - ['王五',wangwu,wangwu@qq.com]
+  - ['赵六',zhaoliu,zhaoliu@qq.com]
+key:
+  - '添加张三'
+  - '添加李四'
+  - '添加王五'
+  - '添加赵六'
