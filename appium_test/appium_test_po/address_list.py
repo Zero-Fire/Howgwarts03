@@ -10,9 +10,10 @@ class Addresslist(BasePage):
     # def __init__(self,driver):
     #     self.driver = driver
     def click_member(self):
-        self.driver.find_element(MobileBy.ANDROID_UIAUTOMATOR,
-                            'new UiScrollable(new UiSelector().'
-                            'scrollable(true).instance(0)).'
-                            'scrollIntoView(new UiSelector().'
-                            'text("添加成员").instance(0));').click()
+        # self.driver.find_element(MobileBy.ANDROID_UIAUTOMATOR,
+        #                     'new UiScrollable(new UiSelector().'
+        #                     'scrollable(true).instance(0)).'
+        #                     'scrollIntoView(new UiSelector().'
+        #                     'text("添加成员").instance(0));').click()
+        self.find_scroll_and_click("添加成员")
         return AddMembrePage(self.driver)
