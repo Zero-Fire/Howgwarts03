@@ -26,7 +26,7 @@ class TestDemo():
         except Exception as e:
             print(e)
         print(r1.json())
-        assert r1.json()['errcode'] == 0
+        assert r1.json()['errmsg'] == 'created'
     def test_updata_mark(self):
         url3 = "https://qyapi.weixin.qq.com/cgi-bin/tag/update"
         data1 = {
@@ -41,7 +41,7 @@ class TestDemo():
         except Exception as e:
             print(e)
         print(r3.json())
-        assert r3.json()['errcode'] == 0
+        assert r3.json()['errmsg'] == 'updated'
 
     def test_delete_mark(self):
         url4 = "https://qyapi.weixin.qq.com/cgi-bin/tag/delete"
@@ -54,4 +54,4 @@ class TestDemo():
         except Exception as e:
             print(e)
         print(r4.json())
-        assert  r4.json()['errcode'] == 0
+        assert  r4.json()['errmsg'] == 'deleted'
