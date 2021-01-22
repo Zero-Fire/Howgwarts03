@@ -12,6 +12,7 @@ class TestDemo():
         # print(r.json())
         #获取类变量token，方便全局调用
         self.access_token = r.json()['access_token']
+        assert r.json()['errcode'] == 0
     def test_create_mark(self):
         rul2 = "https://qyapi.weixin.qq.com/cgi-bin/tag/create"
         data = {
