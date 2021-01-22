@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import requests
 class TestDemo():
+    #setup_class方法获取token
     def setup_class(self):
         rul1 = " https://qyapi.weixin.qq.com/cgi-bin/gettoken"
         param1 = {
@@ -9,6 +10,7 @@ class TestDemo():
         }
         r = requests.request(method="GET",url = rul1,params = param1)
         # print(r.json())
+        #获取类变量token，方便全局调用
         self.access_token = r.json()['access_token']
     def test_create_mark(self):
         rul2 = "https://qyapi.weixin.qq.com/cgi-bin/tag/create"
@@ -19,7 +21,10 @@ class TestDemo():
         params2 = {
             "access_token" : self.access_token
         }
-        r1 = requests.request(method="POST",url = rul2, json = data, params = params2 )
+        try:
+            r1 = requests.request(method="POST",url = rul2, json = data, params = params2 )
+        except Exception as e:
+            print(e)
         print(r1.json())
         assert r1.json()['errcode'] == 0
     def test_updata_mark(self):
@@ -31,7 +36,10 @@ class TestDemo():
         params3 = {
             "access_token" : self.access_token
         }
-        r3 = requests.request(method="POST",url = url3,json = data1,params = params3)
+        try:
+            r3 = requests.request(method="POST",url = url3,json = data1,params = params3)
+        except Exception as e:
+            print(e)
         print(r3.json())
         assert r3.json()['errcode'] == 0
 
@@ -41,6 +49,9 @@ class TestDemo():
             "access_token" : self.access_token,
             "tagid": 2
         }
-        r4 = requests.request(method="GET",url = url4,params = params4)
+        try:
+            r4 = requests.request(method="GET",url = url4,params = params4)
+        except Exception as e:
+            print(e)
         print(r4.json())
         assert  r4.json()['errcode'] == 0
